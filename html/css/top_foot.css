@@ -1,0 +1,26 @@
+
+/*PC表頭尾==============================================*/
+/*PC表頭尾*/	
+.PC .PC_LOGIN, .PC .FOOT_PC{ width:100%; display:block;}
+/*PC表頭尾*/
+/*MOBILE表頭尾*/	
+.MOBILE #float_icon, .MOBILE .MOBILE_LOGIN, .MOBILE .FOOT_MOBILE{ display:block;}
+/*MOBILE表頭尾*/
+/*消失區*/
+.PC .MOBILE_LOGIN, .PC .FOOT_MOBILE{ display:none;}		
+/*消失區尾*/
+/*消失區*/
+.MOBILE #CM763-wrapper #INPUT_BOX, .MOBILE .PC_LOGIN, .MOBILE .FOOT_PC{ display:none;}
+/*消失區尾*/
+
+
+/*PC表頭尾==============================================*/
+
+.MOBILE_LOGIN{
+    width: 100%;
+    position:fixed;
+	left:0;
+	top:0;
+	z-index:999;
+}
+

@@ -1,0 +1,32 @@
+.lo_txt01 {
+	FONT-SIZE: 10pt; COLOR: #555555; LINE-HEIGHT: 20px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none}	
+	
+.lo_txt02 {	FONT-SIZE: 10pt;COLOR: #555555;	LINE-HEIGHT: 22px;	FONT-FAMILY: "Arial", "Helvetica", "sans-serif";	TEXT-DECORATION: none;	font-weight: bold;}
+
+.lo_txt03 {
+	FONT-SIZE: 10pt; COLOR: #6f4ed1; LINE-HEIGHT: 20px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none;font-weight: bold;}
+	
+.lo_txt04 {
+	FONT-SIZE: 10pt; COLOR: #aeaeae; LINE-HEIGHT: 20px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-DECORATION: none}
+	
+.lo_link01 {
+	 FONT-SIZE: 10pt; COLOR: #555555; LINE-HEIGHT: 22px; FONT-FAMILY: Arial,"新細明體", Verdana ;TEXT-DECORATION: none}
+.lo_link01:link {
+	 FONT-SIZE: 10pt; COLOR: #555555; LINE-HEIGHT: 22px; FONT-FAMILY: Arial,"新細明體", Verdana ;TEXT-DECORATION: none}
+.lo_link01:hover {
+	 FONT-SIZE: 10pt; COLOR: #6f4ed1; LINE-HEIGHT: 22px; FONT-FAMILY: Arial,"新細明體", Verdana ;TEXT-DECORATION: none}
+	 
+.lo_link02 {
+	 FONT-SIZE: 10pt; COLOR: #6a50b6; LINE-HEIGHT: 18px; FONT-FAMILY: Arial,"新細明體", Verdana ;TEXT-DECORATION: none}
+.lo_link02:link {
+	 FONT-SIZE: 10pt; COLOR: #6a50b6; LINE-HEIGHT: 18px; FONT-FAMILY: Arial,"新細明體", Verdana ;TEXT-DECORATION: none}
+.lo_link02:hover {
+	 FONT-SIZE: 10pt; COLOR: #6a50b6; LINE-HEIGHT: 18px; FONT-FAMILY: Arial,"新細明體", Verdana ;text-decoration:underline;}
+	 
+.lo_link03 {
+	 FONT-SIZE: 10pt; COLOR: #9c65cc; LINE-HEIGHT: 22px; FONT-FAMILY: Arial,"新細明體", Verdana ;TEXT-DECORATION: none}
+.lo_link03:link {
+	 FONT-SIZE: 10pt; COLOR: #9c65cc; LINE-HEIGHT: 22px; FONT-FAMILY: Arial,"新細明體", Verdana ;TEXT-DECORATION: none}
+.lo_link03:hover {
+	 FONT-SIZE: 10pt; COLOR: #9b5eca; LINE-HEIGHT: 22px; FONT-FAMILY: Arial,"新細明體", Verdana ;TEXT-DECORATION: none}
+	 

@@ -1,0 +1,43 @@
+/*手機用向上按鈕*/
+#float_icon .BACK_top{
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	right: 10px;
+	bottom: 90px;
+	z-index: 999;}
+  
+#float_icon .BACK_top a{
+	display:block;
+	height: 40px;
+	width: 40px;
+	background-color:#000;
+	border-radius: 10px;
+	background-image:url(../images/float_icon/top_icon.png);
+	background-size:25px 25px;
+	background-repeat:no-repeat;
+	background-position:center center;
+	opacity:0.4;}
+	 
+/*手機項目浮水印LISTICON*/	
+#float_icon .LIST_ICON{
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	right: 10px;
+	bottom: 140px;
+	z-index: 999;}
+  
+#float_icon .LIST_ICON a{
+	display:block;
+	height: 40px;
+	width: 40px;
+	border-radius: 10px;
+	background-color:#000;
+	background-image:url(../images/float_icon/list_icon.png);
+	background-size:25px 25px;
+	background-repeat:no-repeat;
+	background-position:center center; 
+	opacity:0.4;}
+
+

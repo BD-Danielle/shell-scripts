@@ -1,0 +1,1832 @@
+/* CSS Document */
+@import url("https://imgs.click108.com.tw/css_2013/reset_2.css");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap');
+
+body{
+    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	font-family: "微軟正黑體", "Microsoft JhengHei", "serif", "sans-serif", Helvetica, Arial;
+	background-color: #fff9ee;
+	background-image: url(../images/free_bazi/bg_ph01.jpg);
+    background-repeat: repeat-x;
+	color: #292623;
+    background-color: #507e26;
+	font-size: 16px;
+}
+
+/* ============= 共用區塊：字級 ============= */
+/* 標題字級 */
+.PC #free_frame .txt_large{
+    font-size:1.5rem;
+    line-height: 1.8rem;
+    }.MOBILE #free_frame .txt_large{
+        font-size:1.3rem;
+        line-height: 1.4rem;
+    }
+
+/* 主要字級 */
+#free_frame .txt_primary{
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+
+/* 次要字級 */
+#free_frame .txt_secondary{
+    font-size: 1.15rem;
+    line-height: 1.8rem;
+}
+
+/* 輔助字級 */
+#free_frame .txt_notes{
+    font-size: 1rem;
+    padding-bottom:5px;
+}
+
+/* 最小字級 */
+.PC #free_frame .txt_small{
+    font-size: .9rem;
+    line-height: 1.6rem;
+}
+
+/* 免費算專用字級：宮位對應區塊 */
+#free_frame .txt_fate{
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+}
+
+/* 字重 */
+#free_frame .txt_bold{font-weight: bold;}
+/* 字元對齊 */
+#free_frame .txt_align_center{text-align: center;}
+/* 字級光暈 */
+#free_frame .text_glow {text-shadow: 2px 2px 1px #ffffff,-2px -2px 1px #ffffff,-2px 2px 1px #ffffff,2px -2px 1px #ffffff;}
+
+
+/* ============= 共用區塊：顏色 ============= */
+/* 主要顏色 */
+#free_frame .color_primary_one{color: #3e8200;}
+#free_frame .color_red_one{color: #f00000;}
+#free_frame .color_red_two{color: #9c2826;}
+#free_frame .color_pink_one{color: #ff1493;}
+#free_frame .color_blue_one{color: #0088ff;}
+#free_frame .color_gray_one{color: #6e6e6e;}
+#free_frame .color_gray_two{color: #b5b5b5;}
+#free_frame .color_brown_one{color: #cb6000;}
+#free_frame .color_brown_two{color: #917a51;}
+
+/* 背景顏色 */
+#free_frame .background_color_transparent{background-color: transparent;}
+#free_frame .background_color_primary_one{background-color: #71a33a;}
+
+/* 背景顏色：淺綠、白 */
+#free_frame .background_color_lite{background-color:#f0fcdf;}
+#free_frame .background_color_white{background-color:#ffffff;}
+
+/* 背景顏色：淺棕1、淺棕2 */
+#free_frame .background_color_brown{background-color:#fff7ef;}
+#free_frame .background_color_brown_two{background-color:#f6efe3;}
+#free_frame .background_color_gray_one{background-color:#f3f3f3;}
+
+/* 背景顏色：淺粉、淺藍 */
+#free_frame .background_color_pink{background-color:#fff0fe;}
+#free_frame .background_color_blue{background-color:#e3f4fc;}
+
+
+/* ============= 共用區塊：間隔 ============= */
+/* 大型段落間隔 */
+.PC #free_frame .spacer_vertical_large{height: 60px;}
+.MOBILE #free_frame .spacer_vertical_large{height: 40px;}
+
+/* 主要段落間隔 */
+.PC #free_frame .spacer_vertical_primary{height: 20px;}
+.MOBILE #free_frame .spacer_vertical_primary{height: 15px;}
+
+/* 特殊段落間隔：命格詳批區塊 */
+.MOBILE #free_frame .fate_chartblock .spacer_vertical_primary{height: 15px;}
+
+/* 特殊段落間隔：251八字命盤區塊 */
+#free_frame .spacer_vertical_bazi{height: 15px;}
+
+
+
+/* ============= 共用區塊：樣式 ============= */
+/* 圓角 */
+#free_frame .border_radius_none{border-radius: 0px;}
+#free_frame .border_radius_15{border-radius: 15px;}
+
+/* 邊框 */
+#free_frame .border_style_blue{border:3px solid #ceebf8;}
+#free_frame .border_style_gray{border:1px solid #eeeeee;}
+
+/* 分隔線 */
+.PC #free_frame .divider{
+    width:100%;
+    border-top: 3px dotted #dedede;
+    margin: 50px 0px 35px 0px;
+    }.MOBILE #free_frame .divider{
+        width:100%;
+        border-top: 3px dotted #dedede;
+        margin: 45px 0px 35px 0px;
+    }
+
+
+/* ============= 控制區塊 ============= */
+/* 控制輸入頁更多姓名分析區塊 icon */
+.MOBILE #intro_sale a.button_icon1_5{
+	background-repeat: no-repeat;
+	background-image: url(../images/intro_sale/icon1_5.png);
+	background-position: 8px 3px;
+	background-size: 60px 60px;
+}
+
+
+/* =============================================*/
+/* ================== 大框架區塊 =================*/
+/* =============================================*/
+#free_frame_wrapper{}
+
+#free_frame{
+    width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+
+
+/* =============================================*/
+/* ================== 主視覺區塊 =================*/
+/* =============================================*/
+/* 輸入頁：主視覺區塊 */
+.PC #free_frame .hero_visual{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin:0 auto;
+    background-image: url(../images/free_bazi/bg_ph02.png);
+    background-position: top center;
+    background-size: 1400px 800px;
+    background-repeat: no-repeat;
+    }.MOBILE #free_frame .hero_visual{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        margin:0 auto;
+        background-image: url(../images/free_bazi/bg_ph02.png);
+        background-position: top center;
+        background-size: 270% auto;
+        background-repeat: no-repeat;
+        margin-top:45px;
+    }
+
+/* 結果頁：主視覺區塊 */
+.PC #free_frame .hero_visual_result{
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+    margin:0 auto;
+    background-image: url(../images/free_bazi/bg_ph03.png);
+    background-position: top center;
+    background-size: 970px 210px;
+    background-repeat: no-repeat;
+    }.MOBILE #free_frame .hero_visual_result{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        margin:0 auto;
+        background-image: url(../images/free_bazi/bg_ph03.png);
+        background-position: top center;
+        background-size: 615px auto;
+        background-repeat: no-repeat;
+        margin-top:45px;
+    }
+
+/* 輸入頁：主舞台區塊 */
+.PC #free_frame .hero_stage{
+    width:520px;
+    height: auto;
+    margin:0 auto;
+    }.MOBILE #free_frame .hero_stage{
+        width:95%;
+        max-width: 670px;
+        height: auto;
+        margin:0 auto;
+    }
+
+/* 結果頁：控制主舞台區塊 */
+.PC #free_frame .hero_visual_result .hero_stage{margin-top:25px;}
+
+/* 主視覺標題區塊 */
+#free_frame .hero_title{text-align: center;}
+
+/* 主視覺標題 h1 */
+.PC #free_frame .hero_title{
+    font-family: "Noto Serif TC", serif;
+    font-size:2.2rem;
+    font-weight: 800;
+    }.MOBILE #free_frame .hero_title{
+        font-family: "Noto Serif TC", serif;
+        font-size:5.8vw;
+        font-weight: 900;
+        line-height: normal;
+    }
+
+/* 主視覺標題 h2 */
+.PC #free_frame .txt_subtitle{
+    width:80%;
+    height: auto;
+    margin:0 auto;
+    background-color: #cf4b1a;
+    border-radius:100px;
+    padding:3px 0px;
+    color: #ffffff;
+    font-family: "微軟正黑體", "Microsoft JhengHei", "serif", "sans-serif", Helvetica, Arial;
+    font-size: 1.5rem;
+    line-height: normal;
+    margin-bottom:25px;
+    }.MOBILE #free_frame .txt_subtitle{
+        width:fit-content;
+        height: auto;
+        margin:0 auto;
+        background-color: #cf4b1a;
+        border-radius:100px;
+        padding:3px 20px;
+        color: #ffffff;
+        margin-bottom:15px;
+        font-size: 4.5vw;
+        font-family: "微軟正黑體", "Microsoft JhengHei", "serif", "sans-serif", Helvetica, Arial;
+        line-height: normal;
+    }
+
+/* 主視覺動態區塊：外框 */
+.PC #free_frame .animation_block{
+    width:510px;
+    height: 510px;
+    margin:0 auto;
+    background-image: url(../images/free_bazi/hero_ph_bagua.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top center;
+    position: relative;
+    animation: brightness 5s infinite;
+    margin-bottom:-30px;
+    }.MOBILE #free_frame .animation_block{
+        width:100%;
+        height: 0px;
+        padding-bottom:100%;
+        margin:0 auto;
+        background-image: url(../images/free_bazi/hero_ph_bagua.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: top center;
+        position: relative;
+        animation: brightness 5s infinite;
+        margin-bottom:-20px;
+    }
+
+/* 主視覺動態區塊：12地支 */
+#free_frame .animation_block::before{
+    content: '';
+    display: inline-block;
+    width:100%;
+    height: 100%;
+    background-image: url(../images/free_bazi/hero_ph_bagua_time.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: bazi-rotate 30s infinite;
+    position: absolute;
+	top:0.2%;
+	left:0%;
+}
+
+/* 主視覺動態區塊：火焰光圈 */
+#free_frame .animation_block::after{
+    content: '';
+    display: inline-block;
+    width:100%;
+    height: 100%;
+    background-image: url(../images/free_bazi/hero_ph_bagua_fire.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: fire-rotate 30s infinite ;
+    position: absolute;
+	top:0.2%;
+	left:0%;
+    z-index: -1;
+}
+
+@keyframes bazi-rotate {
+	0%{
+        opacity:0;
+		transform:rotate(0);
+	}
+    5%{
+        opacity:0.8;
+    }
+    40%{
+        opacity:1;
+    }
+    80%{
+        opacity:0.8;
+    }
+	100%{
+        opacity:0;
+		transform:rotate(360deg);
+	}
+}
+
+@keyframes fire-rotate {
+	0%{
+        opacity: 0;
+		transform: rotate(360deg);
+	}
+    20%{
+        opacity:1;
+    }
+    50%{
+        opacity:0;
+    }
+    70%{
+        opacity:1;
+    }
+	100%{
+        opacity:0;
+		transform:rotate(0);
+	}
+}
+
+@keyframes brightness {
+	0%,100%{
+		filter: brightness(1);
+	}
+	10%,20%,30%{
+		filter: brightness(1.1);
+	}
+	15%,40%{
+		filter: brightness(1);
+	}
+}
+
+/* 主視覺動態區塊：球體 */
+#free_frame .animation_item{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+#free_frame .animation_item ul{
+    width:100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+}
+
+.PC #free_frame .animation_item ul li{
+    width: 170px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }.MOBILE #free_frame .animation_item ul li{
+        width: 30vw;
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+#free_frame .animation_item ul li:nth-child(1){animation: ball1 .8s linear forwards;}
+#free_frame .animation_item ul li:nth-child(2){animation: ball2 .8s linear forwards;}
+#free_frame .animation_item ul li:nth-child(3){animation: ball3 .8s linear forwards;}
+#free_frame .animation_item ul li:nth-child(4){animation: ball4 .8s linear forwards;}
+#free_frame .animation_item ul li:nth-child(5){animation: ball5 .8s linear forwards;}
+
+#free_frame .animation_item ul li img{
+    display: block;
+    width:100%;
+    height: auto;
+}
+
+/* 球位置 */
+@keyframes ball1 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-150%,50%);
+    }
+}
+
+@keyframes ball2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-170%,-80%);
+    }
+}
+
+@keyframes ball3 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%,-193%);
+    }
+}
+
+@keyframes ball4 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(70%,-80%);
+    }
+}
+
+@keyframes ball5 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(50%,50%);
+    }
+}
+
+/* ===============================================*/
+/* ================== 內容框架區塊 =================*/
+/* ===============================================*/
+/* 輸入頁主要容器寬度 */
+.PC #free_frame .container_frame{
+    width: 670px;
+    height: auto;
+    overflow: hidden;
+    margin: 0px auto;
+    box-sizing: border-box;
+    }.MOBILE #free_frame .container_frame{
+        width: 100%;
+        max-width:670px;
+        height: auto;
+        overflow: hidden;
+        margin: 0px auto;
+        box-sizing: border-box;
+    }
+
+.PC #free_frame .container_padding{
+    padding:20px 70px;
+    }.MOBILE #free_frame .container_padding{
+        padding:4% 2.5%;
+    }
+
+/* 結果頁容器寬度 */
+.PC #free_frame .result_container_frame{
+    width:95%;
+    height: auto;
+    overflow: hidden;
+    margin:0 auto;
+    padding:20px 0px;
+    }.MOBILE #free_frame .result_container_frame{
+        width:92%;
+        height: auto;
+        overflow: hidden;
+        margin:0 auto;
+        padding:15px 0px;
+    }
+
+/* 結果頁內文總寬 */
+.PC #free_frame .content_frame{
+    width:90%;
+    height: auto;
+    margin:0 auto;
+    }.MOBILE #free_frame .content_frame{
+        width:100%;
+        height: auto;
+        margin:0 auto;
+    }
+
+/* 結果頁內文盒子 */
+#free_frame .content_box{
+    width:100%;
+    height: auto;
+    margin-bottom:20px;
+}
+
+#free_frame .content_box p:first-child{margin-bottom:0px;}
+#free_frame .content_box p{margin-bottom:10px;}
+#free_frame .content_box p:last-child{margin-bottom:0px;}
+
+#free_frame .decoration_line{
+    width: 100%;
+    border-top: 2px solid #3f8300;
+    margin: 10px 0;
+}
+
+/* =================================================*/
+/* ================== 輸入頁內容區塊 =================*/
+/* =================================================*/
+/* 步驟區塊 */
+.PC #free_frame .step_block{
+    width:90%;
+    height: auto;
+    margin:0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    }.MOBILE #free_frame .step_block{
+        width:100%;
+        height: auto;
+        margin:0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+#free_frame .step_item{
+    width:18%;
+    height: auto;
+}
+
+#free_frame .step_item ul{
+    display: block;
+    width:100%;
+    position: relative;
+}
+
+#free_frame .step_item ul li{
+    width:100%;
+    height: auto;
+}
+
+#free_frame .step_arrow{
+    width:5%;
+    height: auto;
+}
+
+.PC #free_frame .step_item ul li.step_title{
+    font-size:1.1rem;
+    font-weight: bold;
+    text-align: center;
+    }.MOBILE #free_frame .step_item ul li.step_title{
+        font-size:1rem;
+        font-weight: bold;
+        text-align: center;
+    }
+
+.PC #free_frame .step_item ul li.step_free::before{
+    content: '免費';
+    display: inline-block;
+    width:64%;
+    font-size:.9rem;
+    font-weight: normal;
+    font-family: "微軟正黑體", "Microsoft JhengHei", "serif", "sans-serif", Helvetica, Arial;
+    line-height: normal;
+    color: #ffffff;
+    background-color: red;
+    border-radius: 5px;
+    padding:0px 10px;
+    position: absolute;
+	top: 16%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    }.MOBILE #free_frame .step_item ul li.step_free::before{
+        content: '免費';
+        display: inline-block;
+        width:9.5vw;
+        font-size:.8rem;
+        font-weight: normal;
+        font-family: "微軟正黑體", "Microsoft JhengHei", "serif", "sans-serif", Helvetica, Arial;
+        line-height: normal;
+        color: #ffffff;
+        background-color: red;
+        border-radius: 5px;
+        padding:0px 10px;
+        position: absolute;
+        top: 16%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+#free_frame .step_item ul li.step_itemph img,
+#free_frame .step_arrow img{
+    display: block;
+    width:100%;
+    height: auto;
+}
+
+#free_frame .form_block{
+    width:100%;
+    height: auto;
+    margin-top:15px;
+    display: -webkit-box;
+}
+
+#free_frame .form_block #form{
+    width:100%;
+    margin:0 auto;
+}
+
+/* 輸入頁：章節區塊 */
+.PC #free_frame .section_frame{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 60px 0px;
+    }.MOBILE #free_frame .section_frame{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        padding: 40px 0px;
+    }
+
+/* 內容區塊 */
+.PC #free_frame .padding_top_0{padding-top:0px;}
+.MOBILE #free_frame .padding_top_0{padding-top:0px;}
+#free_frame_wrapper .result .padding_0{padding:0px;}
+#free_frame .margin_bottom_0{margin-bottom:0px;}
+
+/* app宣傳區塊 */
+#free_frame .box_block{
+    width:100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.PC #free_frame .box_app{
+    width:100%;
+    height: auto;
+    margin:0 auto;
+    padding:50px 0px;
+    }.MOBILE #free_frame .box_app{
+        width:95%;
+        height: auto;
+        margin:0 auto;
+        padding:20px 0px;
+    }
+
+/* 控制結果頁app宣傳區塊 */
+.PC #free_frame_wrapper .result .box_app{
+    width:100%;
+    height: auto;
+    margin:0 auto;
+    padding:0px;
+    }.MOBILE #free_frame_wrapper .result .box_app{
+        width:100%;
+        height: auto;
+        margin:0 auto;
+        padding:10px 0px 10px 0px;
+        box-sizing: border-box;
+    }
+
+#free_frame .box_app a{
+    display: block;
+    width:100%;
+    height: auto;
+    background-color: #d6e9ff;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: all .3s ease;
+}
+
+.PC #free_frame .box_app a:hover{
+    filter: brightness(1.05);
+}
+
+.PC #free_frame .box_app img{
+    display: block;
+    width:90%;
+    height: auto;
+    margin:0 auto;
+    padding:3% 0%;
+    }.MOBILE #free_frame .box_app img{
+        display: block;
+        width:100%;
+        height: auto;
+        margin:0 auto;
+        padding:3% 0%;
+    }
+
+/* =================================================*/
+/* ================== 結果頁內容區塊 =================*/
+/* =================================================*/
+.PC #free_frame .chapter_title{
+    width:100%;
+    height: auto;
+    font-family: "Noto Serif TC", serif;
+    font-size:2.4rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom:15px;
+    }.MOBILE #free_frame .chapter_title{
+        width:100%;
+        height: auto;
+        font-family: "Noto Serif TC", serif;
+        font-size:1.8rem;
+        font-weight: 700;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-bottom:10px;
+    }
+
+/* iphone6 Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 413px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+    /* 結果頁標題字樣式 */
+    .MOBILE #free_frame .chapter_title{
+        font-family: "Noto Serif TC", serif;
+        font-size:1.6rem;
+        font-weight: 700;
+    }
+}
+
+#free_frame .chapter_title:first-child{margin-bottom:0px;}
+
+#free_frame .chapter_title span.chapter_icon{
+    display: inline-block;
+    width:32px;
+    height: auto;
+    margin:0px 3px;
+}
+
+#free_frame .chapter_title span.chapter_icon img{
+    display: block;
+    width:100%;
+    height: auto;
+}
+
+/* 預定前端套用區塊 */
+.PC #free_frame .reserved_block{
+    background-color: #e2e2e2;
+    font-size: 1.2rem;
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    }.MOBILE #free_frame .reserved_block{
+        background-color: #e2e2e2;
+        font-size: 1.2rem;
+        display: flex;
+        height: 200px;
+        justify-content: center;
+        align-items: center;
+    }
+
+/* 圓點項目清單 */
+#free_frame .list_block{
+    width:100%;
+    height: auto;
+    display: block;
+}
+
+#free_frame .list_block ul{
+    list-style: disc;
+    list-style-position: outside;
+    text-indent: 0px;
+    padding-left: 25px;
+    box-sizing: border-box;
+}
+
+#free_frame .list_block li{margin: 5px 0px 5px 0px;}
+#free_frame .list_block li:first-child{margin:0px 0px 5px 0px;}
+#free_frame .list_block li:last-child{margin-bottom:0px;}
+
+#free_frame ul.list_color_primary li::marker{color: #438c1d;}
+#free_frame ul.list_color_brown li::marker{color: #cb6000;}
+#free_frame ul.list_color_brown_two li::marker{color: #917a51;}
+#free_frame ul.list_color_pink li::marker{color: #ff1493;}
+#free_frame ul.list_color_blue li::marker{color: #2d6cc1;}
+
+
+/* 指引欄位 */
+#free_frame .guide_block{
+    width:100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding:3%;
+}
+
+#free_frame .guide_item{
+    width:auto;
+    height: auto;
+}
+
+/* 結果頁：指引項目 */
+#free_frame .guide_container{
+    width:100%;
+    height: auto;
+}
+
+
+#free_frame .guide_container ul.list_icon02,
+#free_frame .guide_container ul.list_icon03,
+#free_frame .guide_container ul.list_icon04,
+#free_frame .guide_container ul.list_icon05,
+#free_frame .guide_container ul.list_icon06{
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top:5px;
+}
+
+.PC #free_frame .guide_container ul li{
+    padding-left: 30px;
+    font-size:1.15rem;
+    line-height: 2rem;
+    font-weight: normal;
+    box-sizing: border-box;
+    }.MOBILE #free_frame .guide_container ul li{
+        padding-left: 26px;
+        font-size:1.15rem;
+        line-height: 1.6rem;
+        font-weight: normal;
+        box-sizing: border-box;
+        margin-bottom:5px;
+    }
+
+.PC #free_frame .guide_container ul.list_icon02 li{
+    width:calc(100%/3);
+    background: transparent url(../images/icon/icon_05.png) no-repeat;
+    background-size: 23px 23px;
+    background-position-y: 3px;
+    }.MOBILE #free_frame .guide_container ul.list_icon02 li{
+        width:calc(100%/3);
+        background: transparent url(../images/icon/icon_05.png) no-repeat;
+        background-size: 20px 20px;
+        background-position-y: 2px;
+    }
+
+.PC #free_frame .guide_container ul.list_icon03 li{
+    width:calc(100%/2);
+    background: transparent url(../images/icon/icon_06.png) no-repeat;
+    background-size: 23px 23px;
+    background-position-y: 3px;
+    }.MOBILE #free_frame .guide_container ul.list_icon03 li{
+        width:100%;
+        background: transparent url(../images/icon/icon_06.png) no-repeat;
+        background-size: 20px 20px;
+        background-position-y: 2px;
+    }
+
+.PC #free_frame .guide_container ul.list_icon04 li{
+    width:calc(100%/2);
+    background: transparent url(../images/icon/icon_07.png) no-repeat;
+    background-size: 23px 23px;
+    background-position-y: 3px;
+    }.MOBILE #free_frame .guide_container ul.list_icon04 li{
+        width:100%;
+        background: transparent url(../images/icon/icon_07.png) no-repeat;
+        background-size: 20px 20px;
+        background-position-y: 2px;
+    }
+
+.PC #free_frame .guide_container ul.list_icon05 li{
+    width:calc(100%/3);
+    background: transparent url(../images/icon/icon_08.png) no-repeat;
+    background-size: 23px 23px;
+    background-position-y: 3px;
+    }.MOBILE #free_frame .guide_container ul.list_icon05 li{
+        width:calc(100%/3);
+        background: transparent url(../images/icon/icon_08.png) no-repeat;
+        background-size: 20px 20px;
+        background-position-y: 2px;
+    }
+
+.PC #free_frame .guide_container ul.list_icon06 li{
+    width:calc(100%/2);
+    background: transparent url(../images/icon/icon_09.png) no-repeat;
+    background-size: 23px 23px;
+    background-position-y: 3px;
+    }.MOBILE #free_frame .guide_container ul.list_icon06 li{
+        width:calc(100%/2);
+        background: transparent url(../images/icon/icon_09.png) no-repeat;
+        background-size: 20px 20px;
+        background-position-y: 2px;
+    }
+
+.PC #free_frame .guide_container ul.list_column li{width:100%;}
+.MOBILE #free_frame .guide_container ul.list_column li{width:100%;}
+
+#free_frame .guide_item{
+    font-size:1.1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#free_frame .guide_item span.guide_icon{
+    display: inline-block;
+    width:20px;
+    height: auto;
+    margin-right:5px;
+}
+
+#free_frame .guide_item span.guide_icon img{
+    display: block;
+    width:100%;
+    height: auto;
+}
+
+/* 結果頁：八字的庫馬花 */
+#free_frame .lunar_block{
+    width:100%;
+    height: auto;
+    overflow: hidden;
+}
+
+#free_frame .lunar_item{
+    width: 100%;
+    height: auto;
+    margin-bottom:10px;
+    border-radius: 15px;
+}
+
+#free_frame .lunar_item:last-child{margin-bottom:0px;}
+
+#free_frame .lunar_item ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding:2%;
+    box-sizing: border-box;
+}
+
+.PC #free_frame .lunar_item li.lunar_phbox{
+    width:30%;
+    height: 100px;
+    line-height: 100px;
+    font-family: "Noto Serif TC", serif;
+    font-size:2rem;
+    font-weight: 700;
+    text-align: center;
+    }.MOBILE #free_frame .lunar_item li.lunar_phbox{
+        width:25%;
+        height: 100px;
+        line-height: 100px;
+        font-family: "Noto Serif TC", serif;
+        font-size:1.6rem;
+        font-weight: 700;
+        text-align: center;
+        margin-right:2%;
+    }
+
+.PC #free_frame .lunar_item li.lunar_info{
+    width:70%;
+    }.MOBILE #free_frame .lunar_item li.lunar_info{
+        width:75%;
+    }
+
+/* 八字庫馬花背景icon：財庫 */
+.PC #free_frame .lunar_icon01{
+    background: url(../images/icon/icon_10.png) center no-repeat;
+    background-size: 100px 100px;
+    }.MOBILE #free_frame .lunar_icon01{
+        background: url(../images/icon/icon_10.png) center no-repeat;
+        background-size: 80px 80px;
+    }
+
+/* 八字庫馬花背景icon：驛馬 */
+.PC #free_frame .lunar_icon02{
+    background: url(../images/icon/icon_11.png) center no-repeat;
+    background-size: 100px 100px;
+    }.MOBILE #free_frame .lunar_icon02{
+        background: url(../images/icon/icon_11.png) center no-repeat;
+        background-size: 80px 80px;
+    }
+
+/* 八字庫馬花背景icon：桃花 */
+.PC #free_frame .lunar_icon03{
+    background: url(../images/icon/icon_12.png) center no-repeat;
+    background-size: 100px 100px;
+    }.MOBILE #free_frame .lunar_icon03{
+        background: url(../images/icon/icon_12.png) center no-repeat;
+        background-size: 80px 80px;
+    }
+
+/* 結果頁：一生大運分析 */
+.PC #free_frame .mainbox{
+    width:100%;
+    height: auto;
+    overflow: hidden;
+    margin:0 auto;
+    }.MOBILE #free_frame .mainbox{
+        width:100%;
+        height: auto;
+        overflow: hidden;
+        margin-top:10px;
+    }
+
+/*控制表格外框*/
+.PC #free_frame .outerbox{
+    display: flex;
+	flex-flow: column nowrap;  
+	width: 100%;
+	overflow: hidden;
+	margin: auto;
+	font-size: 1rem;
+	box-sizing: border-box;
+	margin-bottom:0px;
+    }.MOBILE #free_frame .outerbox{
+        display: flex;
+        flex-flow: column nowrap;  
+        width: 100%;
+        overflow: hidden;
+        margin: auto;
+        font-size: 1rem;
+        box-sizing: border-box;
+    }
+
+.PC #free_frame .outerbox .row{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: left;
+	align-items: left;
+    line-height: 38px;
+    }.MOBILE #free_frame .outerbox .row{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: left;
+        align-items: left;
+        line-height: 38px;
+    }
+
+.PC #free_frame .outerbox .row:not(:first-child){
+	border-top:1px solid #d0e9f5;
+    }.MOBILE #free_frame .outerbox .row:not(:first-child){
+        border-top:1px solid #d0e9f5;
+    }
+
+.PC #free_frame .outerbox .row:nth-child(2n){}
+
+.PC #free_frame .outerbox .row:nth-child(2n+1){
+	background-color:#eff6f9;
+    }.MOBILE #free_frame .outerbox .row:nth-child(2n+1) {
+        background-color:#eff6f9;
+    }
+
+.PC #free_frame .outerbox .th{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 0;
+	flex-shrink: 0;/* 不要有比例壓縮，當數值為1時表示壓縮比例相同 */
+	padding:5px 0px;
+    }.MOBILE #free_frame .outerbox .th{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 0;
+        flex-shrink: 0;/* 不要有比例壓縮，當數值為1時表示壓縮比例相同 */
+        padding:5px 0px;
+    }
+
+.PC #free_frame .outerbox .td{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 0;
+	flex-shrink: 0;/* 不要有比例壓縮，當數值為1時表示壓縮比例相同 */
+	padding:10px 0px;
+    }.MOBILE #free_frame .outerbox .td{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 0;
+        flex-shrink: 0;/* 不要有比例壓縮，當數值為1時表示壓縮比例相同 */
+        padding:10px 0px;
+    }
+
+.PC #free_frame .outerbox .th, .PC #free_frame .outerbox .td p{
+	font-size:1.2rem;
+	font-weight:bold;
+	line-height: 1.8rem;
+    }.MOBILE #free_frame .outerbox .th, .MOBILE #free_frame .outerbox .td p{
+        font-size:1.1rem;
+        font-weight:bold;
+        line-height: 1.6rem;
+    }
+
+/* 控制奇門遁甲表格樣式：內文樣式 */
+.PC #free_frame .qimen .outerbox .td p{
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    }.MOBILE #free_frame .qimen .outerbox .td p{
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.6rem;
+    }
+
+.PC #free_frame .outerbox .th, .PC #free_frame .outerbox .td p:nth-child(2),
+.PC #free_frame .outerbox .td p:nth-child(3){
+	font-size:1rem;
+	font-weight:normal;
+	line-height: 1.6rem;
+	color:#767676;
+    }.MOBILE #free_frame .outerbox .th, .MOBILE #free_frame .outerbox .td p:nth-child(2),
+    .MOBILE #free_frame .outerbox .td p:nth-child(3){
+        font-size: 1rem;
+        font-weight: normal;
+        line-height: 1.4rem;
+        color: #767676;
+    }
+
+.PC #free_frame .outerbox .th{
+	/* background-color: #e3f4fc; */
+	color: #333333;
+    font-size:1.1rem;
+    }.MOBILE #free_frame .outerbox .th{
+        background-color: #e3f4fc;
+        color: #333333;
+        font-size:1.1rem;
+        line-height: 2rem;
+    }
+
+/* 控制表格右邊線框顏色樣式 */
+.PC #free_frame .outerbox .th:not(:last-child),
+.PC #free_frame .outerbox .td:not(:last-child){
+	border-right:1px solid #d0e9f5;
+    }.MOBILE #free_frame .outerbox .th:not(:last-child),
+    .MOBILE #free_frame .outerbox .td:not(:last-child){
+        border-right:1px solid #d0e9f5;
+    }
+
+/* 控制奇門遁甲表格右邊線框顏色樣式 */
+.PC #free_frame .qimen .outerbox .th:not(:last-child),
+.PC #free_frame .qimen .outerbox .td:not(:last-child){
+	border-right:1px solid #eeeeee;
+    }.MOBILE #free_frame .outerbox .th:not(:last-child),
+    .MOBILE #free_frame .outerbox .td:not(:last-child){
+        border-right:1px solid #eeeeee;
+    }
+
+#free_frame .outerbox .width_1{width: 50%;}
+#free_frame .outerbox .width_2{width: 25%;}
+
+.PC #free_frame .outerbox .starbox{
+	width:160px;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+    }.MOBILE #free_frame .outerbox .starbox{
+        width:80%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+    }
+
+.PC #free_frame .outerbox .starbox img{
+	display: block;
+	width:100%;
+	height: auto;
+    }.MOBILE #free_frame .outerbox .starbox img{
+        display: block;
+        width:100%;
+        height: auto;
+    }
+
+/* 目前運勢能量 */
+.PC #free_frame .fate_point{
+    width:100%;
+    height: auto;
+    margin:0 auto;
+    }.MOBILE #free_frame .fate_point{
+        width:100%;
+        height: auto;
+        margin:0 auto;
+    }
+
+#free_frame .fate_info{
+    text-indent: 10px;
+    border-left: 3px solid #2d6cc1;
+    margin: 20px 0 20px 0;
+}
+
+/* 五行標誌 */
+#free_frame .fate_info span.mark_icon{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    font-size:1.1rem;
+    font-weight: bold;
+    line-height: 25px;
+    text-align: center;
+    margin: 0 3px;
+    text-indent: 0px;
+}
+
+#free_frame .fate_info p{
+    margin-bottom:5px;
+}
+
+/* 五行顏色 */
+#free_frame .fire{
+	border: 3px solid #ef4c4c;
+	border-radius:25px; 
+	color: #ef4c4c;
+}
+
+#free_frame .gold{
+	border: 3px solid #c8a000;
+	border-radius:25px; 
+	color: #c8a000;
+}
+
+#free_frame .wood{
+	border: 3px solid #3a8a00;
+	border-radius:25px; 
+	color: #3a8a00;
+}
+
+#free_frame .water{
+	border: 3px solid #006ba9;
+	border-radius:999em; 
+	color: #006ba9;
+}
+
+#free_frame .soil{
+	border: 3px solid #9a3e00;
+	border-radius:25px; 
+	color: #9a3e00;
+}
+
+#free_frame .fate_stars{
+    width:100%;
+    height: auto;
+}
+
+#free_frame .fate_stars ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.PC #free_frame .fate_stars li.star_item{
+    width:160px;
+    height: auto;
+    margin-left:5px;
+    }.MOBILE #free_frame .fate_stars li.star_item{
+        width:150px;
+        height: auto;
+        margin-left:5px;
+    }
+
+#free_frame .fate_stars li.star_item img{
+    display: block;
+    width:100%;
+    height: auto;
+}
+
+
+/* 結果頁：引導配圖區塊 */
+.PC #free_frame .prewords_block{
+    width:100%;
+    height: auto;
+    margin-top:25px;
+    }.MOBILE #free_frame .prewords_block{
+        width:100%;
+        height: auto;
+        margin-top:25px;
+    }
+
+#free_frame .prewords_block img{
+    display: block;
+    width:100%;
+    height: auto;
+}
+
+/* 結果頁：底色標題區塊 */
+.PC #free_frame .main_title_bar{
+    width: 100%;
+    height: 130px;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    box-sizing: border-box;
+    /* border: 10px double #fffaee; */
+    font-size: 3rem;
+    line-height: 130px;
+    font-family: "Noto Serif TC", serif;
+    font-weight: 900;
+    font-style: normal;
+    box-shadow: inset 0 0 7px 1px rgba(255, 255, 255, 0.6);
+    letter-spacing: 2px;
+    color: #ffffff;
+    }.MOBILE #free_frame .main_title_bar{
+        width: 100%;
+        height: 90px;
+        margin: 0 auto;
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        box-sizing: border-box;
+        /* border: 10px double #fffaee; */
+        font-size: 2.2rem;
+        line-height: 90px;
+        font-family: "Noto Serif TC", serif;
+        font-weight: 900;
+        font-style: normal;
+        box-shadow: inset 0 0 7px 1px rgba(255, 255, 255, 0.6);
+        letter-spacing: 2px;
+        color: #ffffff;
+    }
+
+#free_frame .main_title_bg_01{background-image: url(../images/free_bazi/result_main_title_bg.jpg);}
+#free_frame .main_title_bg_02{background-image: url(../images/free_bazi/result_main_title_bg02.jpg);}
+
+/* 命格詳批區塊 */
+#free_frame .fate_chartblock{
+    background-color: #fff9ee;
+    box-shadow: inset 0 0 7px 4px rgba(241, 179, 117, .6);
+}
+
+/* 命格詳批區塊：使用者姓名 */
+.PC #free_frame .user_name{
+    font-family: "Noto Serif TC", serif;
+    font-weight: 900;
+    font-style: normal;
+    width: 100%;
+    height: 60px;
+    background-image: url(../images/free_bazi/chat_name_bg.png);
+    background-repeat: no-repeat;
+    background-size: 70% auto;
+    background-position: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    margin-top:40px;
+    }.MOBILE #free_frame .user_name{
+        font-family: "Noto Serif TC", serif;
+        font-weight: 900;
+        font-style: normal;
+        width: 100%;
+        height: 60px;
+        background-image: url(../images/free_bazi/chat_name_bg.png);
+        background-repeat: no-repeat;
+        background-size: 95% auto;
+        background-position: center;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3rem;
+        line-height: 2.2rem;
+        margin-top:25px;
+    }
+
+/* 宮位對應區塊 */
+#free_frame .main_chart{
+    display: flex;
+    flex-direction: column;
+}
+
+#free_frame .chart_list{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#free_frame .chart_list div {
+	display: inline-flex;
+	height: 60px;
+	align-items: center;
+}
+
+#free_frame .chart_list div:nth-child(1){
+	width: 30%;
+	justify-content: center;
+}
+
+#free_frame .chart_list div:nth-child(2){
+	width: 70%;
+	justify-content: flex-start;
+}
+
+.PC #free_frame .chart_list .chat_label{
+	width: 84px;
+	height: 60px;
+	background-image: url(../images/free_bazi/chat_label_bg.png);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center;
+	margin-right: 5px;
+	display: inline-flex;
+    align-items: center;
+    justify-content: center;
+	font-family: "Noto Serif TC", serif;
+	font-weight: 900;
+	font-style: normal;
+    }.MOBILE #free_frame .chart_list .chat_label{
+        width: 74px;
+        height: 60px;
+        background-image: url(../images/free_bazi/chat_label_bg.png);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: center;
+        margin-right: 5px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Noto Serif TC", serif;
+        font-weight: 900;
+        font-style: normal;
+    }
+
+#free_frame .chart_list+.chart_list{
+	border-top: 1px solid #f9d6b2;
+}
+
+.PC #free_frame .width_80{width:80%;}
+.MOBILE #free_frame .width_80{width:100%;}
+#free_frame .width_100{width:100%}
+
+
+/* 項目清單區塊 */
+#free_frame .norm_list_block{
+    width:100%;
+    height: auto;
+}
+
+#free_frame .list_item_title{
+    width:100%;
+    height: auto;
+}
+
+#free_frame .list_item_title ul.list_icon01{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#free_frame .list_item_title ul.list_icon01 li{
+    background: transparent url(../images/icon/icon_list_01.png) no-repeat;
+    background-size: 23px 23px;
+    background-position-y: 2px;
+    padding-left: 32px;
+    font-size:1.15rem;
+    line-height: 1.8rem;
+    font-weight: bold;
+}
+
+#free_frame .list_item_title p{
+    font-size: 1.15rem;
+    line-height: 2rem;
+}
+
+#free_frame .list_itembox{
+    display: inline-block;
+    width:22px;
+    height: auto;
+    margin-right:10px;
+}
+
+#free_frame .list_itembox img{
+    display: block;
+    width:100%;
+    height: auto;
+}
+
+#free_frame .indent_block{
+    width:100%;
+    padding-left:32px;
+    box-sizing: border-box;
+    margin-bottom:20px;
+}
+
+#free_frame .indent_block p{
+    margin-top:10px;
+}
+
+#free_frame .indent_block p:first-child{margin-top:0px;}
+
+/* 個人資料區塊 */
+#free_frame .user_block{
+    width:100%;
+    height: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    padding:10px 0px;
+}
+
+#free_frame .user_block p{
+    text-align: center;
+}
+
+#free_frame .user_block a{
+    display: inline-block;
+    color: #1a8dd4;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+#free_frame .user_block span.gender{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-bottom: -8px;
+}
+
+#free_frame .user_block span.gender img{
+    display: block;
+    width:100%;
+    height: auto;
+}
+
+/* 捲軸：你的格局區塊 */
+.PC #free_frame .scroll_block{
+    width:510px;
+	height: 136px;
+	position: relative;
+	margin: 0px auto;
+    }.MOBILE #free_frame .scroll_block{
+        width: 100%;
+        height: auto;
+        padding-bottom: 26.666%;
+        position: relative;
+        margin: 0px auto;
+    }
+
+#free_frame .scroll_block img{
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+}
+
+.PC #free_frame .scroll_block ul{
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 430px;
+	height: 100px;
+	background-color: #fffde2;
+	border: 2px solid #fffde2;
+    }.MOBILE #free_frame .scroll_block ul{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 82%;
+        height: 76%;
+        background-color: #fffde2;
+        border: 1px solid #fffde2;
+    }
+
+.PC #free_frame .scroll_block ul li:nth-child(1){
+    width: 100%;
+	height: auto;
+	overflow: hidden;
+    font-family: "微軟正黑體", "Microsoft JhengHei", "serif", "sans-serif", Helvetica, Arial;
+	font-size: 1.4rem;
+	line-height: 2.24rem;
+	color: #fff;
+    font-weight: bold;
+	text-align: center;
+    }.MOBILE #free_frame .scroll_block ul li:nth-child(1){
+        width: 100%;
+        height: auto;
+        font-size: 5vw;
+        line-height: 1.6em;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+    }
+
+.PC #free_frame .scroll_block ul li:nth-child(2){
+    width: 100%;
+	height: auto;
+	overflow: hidden;
+	font-family: "微軟正黑體", "Microsoft JhengHei", "serif", "sans-serif", Helvetica, Arial;
+	font-size: 2.5rem;
+	line-height:4rem;
+	color: #000;
+	font-weight: bold;
+	text-align: center;
+    }.MOBILE #free_frame .scroll_block ul li:nth-child(2){
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        font-size: 7vw;
+        line-height: 1.6em;
+        color: #000;
+        font-weight: bold;
+        text-align: center;
+    }
+
+#free_frame .scroll_block ul li img{
+    position: static;
+    display: inline-block;
+    width: 50%;
+    height: auto; 
+	vertical-align:middle;
+}
+
+/* 控制奇門遁甲表格樣式：標題顏色 */
+#free_frame .qimen .outerbox .th{color: #ffffff;}
+#free_frame .qimen .row .background_color_brown_three{background-color: #9c4e02;}
+#free_frame .qimen .row .background_color_orange{background-color: #eb6039;}
+
+@media (min-width:826px){
+    .MOBILE #free_frame .hero_title{
+        font-family: "Noto Serif TC", serif;
+        font-size:2.2rem;
+        font-weight: 800;
+        line-height: normal;
+    }
+
+    .MOBILE #free_frame .txt_subtitle{
+        font-size: 1.5rem;
+        line-height: normal;
+    }
+}
+
+@media (min-width:1025px){
+    .MOBILE #free_frame .hero_visual {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        margin: 0 auto;
+        background-image: url(../images/free_bazi/bg_ph02.png);
+        background-position: top center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-top: 45px;
+    }
+
+    .MOBILE #free_frame .animation_item ul li {
+        width: 210px;
+    }
+}
+
+/* iPad */
+@media only screen
+    and (min-device-width: 768px) 
+    and (max-device-width: 1024px)
+    and (-webkit-min-device-pixel-ratio: 1){
+    .MOBILE #free_frame .chapter_title {
+        font-family: "Noto Serif TC", serif;
+        font-size: 2.2rem;
+    }
+    .MOBILE #free_frame .hero_title{
+        font-family: "Noto Serif TC", serif;
+        font-size:2.2rem;
+        font-weight: 800;
+        line-height: normal;
+    }
+
+    .MOBILE #free_frame .txt_subtitle{
+        font-size: 1.5rem;
+        line-height: normal;
+    }
+
+    .MOBILE #free_frame .outerbox .th {
+        font-size: 3vw;
+        line-height: 2rem;
+    }
+
+    .MOBILE #free_frame .outerbox .th, .MOBILE #free_frame .outerbox .td p {
+        font-size: 1.2rem;
+        font-weight: bold;
+        line-height: 2rem;
+    }
+
+    .MOBILE #free_frame .outerbox .td p:nth-child(2),
+    .MOBILE #free_frame .outerbox .td p:nth-child(3){
+        font-size: 1.1rem;
+        font-weight: normal;
+        line-height: 1.6rem;
+    }
+
+    .MOBILE #free_frame .qimen .outerbox .th{
+        font-size: 1.2rem;
+        font-weight: normal;
+        line-height: 1.8rem;
+        color: #ffffff;
+    }
+
+    .MOBILE #free_frame .outerbox .starbox {
+        width: 60%;
+        height: auto;
+    }
+
+    .MOBILE #free_frame .qimen .outerbox .td p {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: normal;
+    }
+
+    .MOBILE #free_frame .scroll_block ul li:nth-child(1) {
+        font-size: 2rem;
+    }
+
+    .MOBILE #free_frame .scroll_block ul li:nth-child(2) {
+        font-size: 3rem;
+        line-height: normal;
+    }
+
+    .MOBILE #free_frame .main_title_bar{
+        font-size: 2.8rem;
+        height: 120px;
+        line-height: 120px;
+    }
+
+    .MOBILE #free_frame .animation_item ul li{
+        width: 180px;
+        height: auto;
+    }
+
+    .MOBILE #free_frame .hero_visual {
+        background-image: url(../images/free_bazi/bg_ph02.png);
+        background-position: top center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-top: 45px;
+    }
+
+    @keyframes ball1 {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+			transform: translate(-250px,150px);
+		}
+	}
+	
+	@keyframes ball2 {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+			transform: translate(66px,150px);
+		}
+	}
+	
+	@keyframes ball3 {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+			transform: translate(-91px, -320px);
+		}
+	}
+	
+	@keyframes ball4 {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+			transform: translate(190px, -90px);
+		}
+	}
+	
+	@keyframes ball5 {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+			transform: translate(-370px , -90px);
+		}
+	}
+}

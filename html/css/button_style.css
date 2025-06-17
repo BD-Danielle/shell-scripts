@@ -1,0 +1,146 @@
+a{
+    text-decoration: none;
+}
+
+/* ============= 顏色 ============= */
+/* 紅色01 */
+#free_frame .gradient_color_red{
+    background: #B30100;
+    background: linear-gradient(0deg, #b30100 0%, #d90000 100%);
+}
+
+.PC #free_frame .gradient_color_red:hover{
+    background: #d90000;
+    background: linear-gradient(0deg, #d90000 0%, #b30100 100%);
+}
+
+/* 紫色01 */
+#free_frame .gradient_color_purple{
+    background: #8600ff;
+    background: linear-gradient(0deg, #8600ff 0%, #c12dda 100%);
+}
+
+.PC #free_frame .gradient_color_purple:hover{
+    background: #c12dda;
+    background: linear-gradient(0deg, #c12dda 0%, #8600ff 100%);
+}
+
+/* ============= 按鈕樣式 ============= */
+/* 圓角 */
+#free_frame .border_smallround{
+    border-radius:5px;
+    box-shadow: inset 0 1px 6px #ffffff;
+}
+
+/* ============= 動態色系 ============= */
+/* 紅色01 */
+#free_frame .animate_color_red01{
+    background: linear-gradient(-45deg, #B30100, #e90707, #a00000);
+	background-size: 300%;
+	animation:flow-effect 10s linear infinite;
+}
+
+.PC #free_frame .animate_color_red01:hover{
+    background: linear-gradient(-45deg, #e90707, #B30100, #a00000);
+	background-size: 300%;
+	animation:flow-effect 10s linear infinite;
+}
+
+/* 紫色01 */
+#free_frame .animate_color_purple01{
+    background: linear-gradient(-45deg, #6800c6, #8600ff, #c12dda);
+	background-size: 300%;
+	animation:flow-effect 10s linear infinite;
+}
+
+.PC #free_frame .animate_color_purple01:hover{
+    background: linear-gradient(-45deg, #8600ff, #c12dda, #6800c6);
+	background-size: 300%;
+	animation:flow-effect 10s linear infinite;
+}
+
+
+/* ===========================================*/
+/* ================== 按鈕樣式 =================*/
+/* ===========================================*/
+/* 按鈕上方系統字區塊 */
+#free_frame .button_frame .button_text_top{
+    text-align: center;
+    margin:20px 0px 6px 0px;
+}
+
+/* 按鈕上方系統字樣式 */
+#free_frame .button_frame .button_text_top p{
+    font-size:1.1rem;
+    line-height: 1.4rem;
+    color: #1a8dd4;
+}
+
+/* ===========================================*/
+/* ================== 按鈕框架 =================*/
+/* ===========================================*/
+#free_frame .button_frame{
+    width:100%;
+    height: auto;
+}
+
+.PC #free_frame .button_box{
+    width:50%;
+    height: auto;
+    margin:0 auto;
+    }.MOBILE #free_frame .button_box{
+        width:70%;
+        height: auto;
+        margin:0 auto;
+    }
+
+.PC #free_frame .button_box a{
+    display: block;
+    width:100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    transition: all .3s ease-in-out;
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none;
+    }.MOBILE #free_frame .button_box a{
+        display: block;
+        width:100%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        transition: all .3s ease-in-out;
+        color: #ffffff;
+        font-size: 1.4rem;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+.PC #free_frame .button_box a p{
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    }.MOBILE #free_frame .button_box a p{
+        color: #ffffff;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+
+.PC #free_frame .button_box a p:hover{color: #fff9bc;}
+
+#free_frame .button_box a p::after{
+    display: inline-block;
+    content: " ";
+	border-left: 14px solid #ffffff;
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+	margin-left: 6px;
+}
+
+@keyframes flow-effect{
+	0%{background-position: 0% 50%;}
+	50%{background-position: 100% 50%;}
+	100%{background-position: 0% 50%;}
+}

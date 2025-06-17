@@ -1,0 +1,243 @@
+.PC #brand_block{
+	width: 100%;/*750*/
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 2px solid #eac3fb;
+    background-color: #FFF;
+    box-sizing: border-box;
+}
+
+.PC #brand_block .brand-title{
+    width: 100%;
+    height: 62px;
+    background-color: #eac3fb;
+    color: #8000B7;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 62px;
+    font-weight: bold;
+}
+
+.PC #brand_block .brand-content{
+    width:100%;
+    height: auto;
+    padding:20px;
+    box-sizing: border-box;
+}
+
+.PC #brand_block .brand-content .bph_box{
+    width:100%;
+    max-width: 540px;
+    height: auto;
+    margin:0 auto;
+}
+
+.PC #brand_block .brand-content .bph_box img{
+    display: block;
+    width:100%;
+    height: auto;
+}
+
+.PC #brand_block .aboutSam{
+    width:100%;
+    height: 0px;
+    padding-bottom:67.164179%;
+    overflow: hidden;
+    background: url(../images/brand_block/click108_about.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+/*品牌延伸連結*/
+.PC #brand_block .brand_promo{
+    width:540px;
+    height: auto;
+    margin:0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    margin-bottom:20px;
+}
+
+.PC #brand_block .theBoard{
+    width:100%;
+    height: auto;
+}
+
+.PC #brand_block .board-title{
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0px;
+    text-shadow: 2px 2px 0px #ffffff,
+    -2px -2px 0px #ffffff,
+    -2px 2px 0px #ffffff,
+    2px -2px 0px #ffffff;
+}
+
+.PC #brand_block .board_line{
+    width:90%;
+    border-bottom: 1px solid #bababa;
+    margin:0 auto;
+    margin-bottom:15px;
+}
+
+.PC #brand_block .board-info{
+    width:90%;
+    height: auto;
+    margin:0 auto;
+}
+
+.PC #brand_block .board-info ul li{
+    width:100%;
+    height: auto;
+    margin-bottom:10px;
+}
+
+.PC #brand_block .board-info ul li a{
+    display: block;
+    color:#1a8dd4;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    text-decoration: none;
+}
+
+.PC #brand_block .board-info ul li a:hover{
+    text-decoration: underline;
+}
+
+.PC #brand_block .board-info ul li a::before{
+    content: '';
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 7px 0 7px 11px;
+	margin-right: 8px;
+	border-color: transparent transparent transparent #1a8dd4;
+}
+
+/*==============================手機版==============================*/
+
+.MOBILE #brand_block{
+	width: 95%;
+    height: auto;
+    overflow: hidden;
+    margin: 0px auto;
+    border: 2px solid #eac3fb;
+    background-color: #FFF;
+}
+
+.MOBILE #brand_block .brand-title{
+    width: 100%;
+    height: 62px;
+    background-color: #eac3fb;
+    color: #8000B7;
+    text-align: center;
+    font-size: 1.8rem;
+    line-height: 62px;
+    font-weight: bold;
+}
+
+.MOBILE #brand_block .brand-content{
+    width:100%;
+    height: auto;
+    padding:15px;
+    box-sizing: border-box;
+}
+
+.MOBILE #brand_block .brand-content .bph_box{
+    width:100%;
+    height: auto;
+    margin:0 auto;
+}
+
+.MOBILE #brand_block .brand-content .bph_box img{
+    display: block;
+    width:100%;
+    height: auto;
+}
+
+.MOBILE #brand_block .aboutSam{
+    width:100%;
+    height: 0px;
+    padding-bottom:71%;
+    overflow: hidden;
+    background: url(../images/brand_block/click108_about.jpg);
+    background-repeat: no-repeat;
+    background-size: 110% auto;
+    background-position: top center;
+}
+
+/*品牌延伸連結*/
+.MOBILE #brand_block .brand_promo{
+    width:90%;
+    height: auto;
+    margin:0 auto;
+    overflow: hidden;
+    border-radius: 13px;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    margin-bottom:20px;
+}
+
+.MOBILE #brand_block .theBoard{
+    width:100%;
+    height: auto;
+    padding:10px 0px;
+}
+
+.MOBILE #brand_block .board-title{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 0px #ffffff,
+    -2px -2px 0px #ffffff,
+    -2px 2px 0px #ffffff,
+    2px -2px 0px #ffffff;
+}
+
+.MOBILE #brand_block .board_line{
+    width:90%;
+    border-bottom: 1px solid #bababa;
+    margin:0 auto;
+    margin-top:10px;
+    margin-bottom:15px;
+}
+
+.MOBILE #brand_block .board-info{
+    width:90%;
+    height: auto;
+    margin:0 auto;
+}
+
+.MOBILE #brand_block .board-info ul li{
+    width:100%;
+    height: auto;
+    margin-bottom:5px;
+}
+
+.MOBILE #brand_block .board-info ul li:last-child{
+    margin-bottom:0px;
+}
+
+.MOBILE #brand_block .board-info ul li a{
+    display: block;
+    color:#1a8dd4;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.MOBILE #brand_block .board-info ul li a::before{
+    content: '';
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 6px 0 6px 11px;
+	margin-right: 5px;
+	border-color: transparent transparent transparent #1a8dd4;
+}

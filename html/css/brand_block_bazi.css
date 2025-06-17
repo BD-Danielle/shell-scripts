@@ -1,0 +1,141 @@
+/* 顏色 */
+#brand_block_bazi .color_red{color: #d5170b;}
+#brand_block_bazi .color_brown{color: #cc5414;}
+#brand_block_bazi .color_green{color: #31811f;}
+
+/* 控制 div 寬度 */
+#brand_block_bazi .width_100{width:100%;}
+
+#brand_block_bazi{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border: 1px solid #3e8200;
+    box-sizing: border-box;
+}
+
+.PC #brand_block_bazi .norm_title{
+    width: 100%;
+    height: auto;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    margin: 0px auto;
+    padding:8px 0px;
+	}.MOBILE #brand_block_bazi .norm_title{
+		width: 100%;
+		height: 50px;
+		font-size: 1.5rem;
+		font-weight: bold;
+		line-height: 50px;
+		text-align: center;
+		color: #ffffff;
+		margin: 0px auto;
+	}
+
+.PC #brand_block_bazi .norm_content{
+    width: 95%;
+    margin: 20px auto;
+    overflow: hidden;
+	}.MOBILE #brand_block_bazi .norm_content{
+		width: 92%;
+		margin: 20px auto;
+		overflow: hidden;
+	}
+
+/* 項目清單：第二層標題底色 */
+#brand_block_bazi .second_bar{
+	background-color: #3e8200;
+	border: 1px solid #3e8200;
+}
+
+.PC #brand_block_bazi .double_case{
+	height: auto;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items:center;
+	margin:0 auto;
+	}.MOBILE #brand_block_bazi .double_case{
+		width:100%;
+		height: auto;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items:center;
+		margin:0 auto;
+	}
+
+.PC #brand_block_bazi .double_case .inph_box{
+	width:36%;
+	}.MOBILE #brand_block_bazi .double_case .inph_box{
+		width:50%;
+		margin-bottom:10px;
+	}
+
+/* 雙欄樣式區塊：控制文字寬度 */
+.PC #brand_block_bazi .double_case .inph_text{
+	width:60%;
+	}.MOBILE #brand_block_bazi .double_case .inph_text{
+		width:100%;
+	}
+
+/* 項目符號：勾 */
+#brand_block_bazi .icon-2{
+    background-image: url(../images/icon/icon_01.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 26px auto;
+	margin-bottom:0px;
+}
+
+/* 科技紫微網的八字論命：項目符號小標題 */
+.PC #brand_block_bazi .double_case .list_title{
+	width: 100%;
+    height: auto;
+    overflow: hidden;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+	}.MOBILE #brand_block_bazi .double_case .list_title{
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+		font-size: 1.2rem;
+		font-weight: bold;
+		margin-bottom: 5px;
+	}
+
+/* 科技紫微網的八字論命：印章圖片盒子 */
+.PC #brand_block_bazi .double_case .inph_box2{
+	width:30%;
+	margin:0 auto;
+	}.MOBILE #brand_block_bazi .double_case .inph_box2{
+		width:45%;
+		margin-bottom:10px;
+	}
+
+.PC #brand_block_bazi .double_case .inph_text2{width:64%;}
+.PC #brand_block_bazi .double_case .inph_text2 li{
+	font-size:1.1rem;
+	line-height: 1.8rem;
+	}.MOBILE #brand_block_bazi .double_case .inph_text2{width:100%;}
+	.MOBILE #brand_block_bazi .double_case .inph_text2 li{
+		font-size:1.1rem;
+		line-height: 1.8rem;
+	}
+
+.PC #brand_block_bazi .double_case .inph_box img,
+.PC #brand_block_bazi .double_case .inph_box2 img{
+	display: block;
+	width:100%;
+	height: auto;
+	}.MOBILE #brand_block_bazi .double_case .inph_box img,
+	.MOBILE #brand_block_bazi .double_case .inph_box2 img{
+		display: block;
+		width:100%;
+		height: auto;
+	}
