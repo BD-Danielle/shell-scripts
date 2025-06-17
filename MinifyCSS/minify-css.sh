@@ -45,10 +45,30 @@ esac
 
 echo "檢測到作業系統: $OS_TYPE"
 
-# 處理目標目錄
-CSS_DIR="./css"
-BACKUP_DIR="./css/backup/$(date +%Y%m%d_%H%M%S)"
-MINIFY_DIR="./css/minify"
+# 詢問用戶輸入 CSS 目錄
+echo "請輸入 CSS 目錄路徑 (直接按 Enter 使用預設值: ./css)："
+read -p "> " input_css_dir
+CSS_DIR=${input_css_dir:-"./css"}
+
+# 移除路徑末尾的斜線
+CSS_DIR=${CSS_DIR%/}
+
+# 檢查目錄是否存在
+if [ ! -d "$CSS_DIR" ]; then
+    echo "⚠️ 警告：目錄 '$CSS_DIR' 不存在"
+    read -p "是否要建立此目錄？(y/n) " create_dir
+    if [[ $create_dir =~ ^[Yy]$ ]]; then
+        mkdir -p "$CSS_DIR"
+        echo "✓ 已建立目錄：$CSS_DIR"
+    else
+        echo "❌ 取消操作"
+        exit 1
+    fi
+fi
+
+# 設定其他目錄
+BACKUP_DIR="$CSS_DIR/backup/$(date +%Y%m%d_%H%M%S)"
+MINIFY_DIR="$CSS_DIR/minify"
 
 # 顯示腳本功能說明
 echo "=============================="
