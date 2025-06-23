@@ -8,6 +8,9 @@
 # Windows: 使用 Git Bash 或 WSL 執行
 # =============================
 
+# 設定環境變量以處理特殊字符
+export LC_ALL=C
+
 # 檢測作業系統類型
 OS_TYPE="unknown"
 case "$(uname -s)" in
@@ -64,51 +67,159 @@ find "$CSS_DIR" -name "*.css" | while read -r file; do
     
     # 建立臨時文件
     temp_file="${file}.tmp"
-     # 根據作業系統選擇適當的 sed 命令
+    # 根據作業系統選擇適當的 sed 命令
     if [ "$OS_TYPE" = "MacOS" ]; then
-        # MacOS 的 sed 命令需要特別處理
-        sed -E '
-            # 移除屬性前綴
-            /[^:]-webkit-/d;
-            /[^:]-moz-/d;
-            /[^:].*-ms.*:/d;              # 移除任何包含 -ms 的屬性名稱
-            # 移除屬性值前綴
-            /: *-webkit-/d;
-            /: *-moz-/d;
-            # 移除屬性值後綴包含 -ms 的行
-            /:[^;{}]*-ms.*[;{}]/d;
-            # 移除空行
-            /^[[:space:]]*$/d;
-        ' "$file" > "$temp_file"
+        # MacOS 的 sed 命令處理前綴轉換
+        LC_ALL=C sed -E \
+            -e '/(input-placeholder|::-webkit-input-placeholder|:-moz-placeholder|:-ms-input-placeholder)/b' \
+            -e '/-webkit-appearance: *none/b' \
+            -e 's/^([[:space:]]*)-webkit-border-radius:/\1border-radius:/g' \
+            -e 's/^([[:space:]]*)-moz-border-radius:/\1border-radius:/g' \
+            -e 's/^([[:space:]]*)-webkit-box-sizing:/\1box-sizing:/g' \
+            -e 's/^([[:space:]]*)-moz-box-sizing:/\1box-sizing:/g' \
+            -e 's/^([[:space:]]*)-webkit-transform:/\1transform:/g' \
+            -e 's/^([[:space:]]*)-moz-transform:/\1transform:/g' \
+            -e 's/^([[:space:]]*)-webkit-transition:/\1transition:/g' \
+            -e 's/^([[:space:]]*)-moz-transition:/\1transition:/g' \
+            -e 's/^([[:space:]]*)-webkit-animation:/\1animation:/g' \
+            -e 's/^([[:space:]]*)-moz-animation:/\1animation:/g' \
+            -e 's/^([[:space:]]*)-ms-animation:/\1animation:/g' \
+            "$file" | \
+        LC_ALL=C awk '
+            # 保存前一行的内容和属性名称
+            function get_prop(line) {
+                if (match(line, /:[^;]+/))
+                    return substr(line, 1, RSTART)
+                return line
+            }
+            
+            NR > 1 { 
+                # 获取当前行和前一行的属性名
+                curr_prop = get_prop($0)
+                prev_prop = get_prop(prev)
+                
+                # 如果两行的属性名相同，跳过当前行
+                if (curr_prop == prev_prop)
+                    next
+                
+                # 如果不是连续的空行，打印前一行
+                if (!(prev ~ /^[[:space:]]*$/ && $0 ~ /^[[:space:]]*$/))
+                    print prev
+            }
+            # 保存当前行
+            { prev = $0 }
+            # 打印最后一行
+            END { 
+                if (NR > 0) 
+                    print prev 
+            }
+        ' > "$temp_file"
     elif [ "$OS_TYPE" = "Linux" ]; then
-        # Linux 的 sed 命令
-        sed -E '
-            # 移除屬性前綴
-            /[^:]-webkit-/d;
-            /[^:]-moz-/d;
-            /[^:].*-ms.*:/d;              # 移除任何包含 -ms 的屬性名稱
-            # 移除屬性值前綴
-            /: *-webkit-/d;
-            /: *-moz-/d;
-            # 移除屬性值後綴包含 -ms 的行
-            /:[^;{}]*-ms.*[;{}]/d;
+        # Linux 的 sed 命令使用相同的規則
+        LC_ALL=C sed -E '
+            # 保留 input-placeholder 相關的選擇器
+            /input-placeholder/b
+
+            # 保留只有單一前綴屬性的情況（不轉換為標準屬性）
+            # 使用 N 指令讀取下一行進行檢查
+            /-[a-z]*-/{
+                N
+                /.*\{[[:space:]]*-[a-z]*-[^}]*\}/!b
+                /-[a-z]*-.*-[a-z]*-/!b
+            }
+
+            # 保留 -webkit-appearance: none 的特殊情況
+            /-webkit-appearance: *none/b
+
+            # 處理帶有標準版本的情況
+            /border-radius:/{
+                /-[a-z]*-border-radius:/d
+            }
+            /box-sizing:/{
+                /-[a-z]*-box-sizing:/d
+            }
+            /transform:/{
+                /-[a-z]*-transform:/d
+            }
+            /transition:/{
+                /-[a-z]*-transition:/d
+            }
+            /animation:/{
+                /-[a-z]*-animation:/d
+            }
+
+            # 處理只有前綴版本的情況
+            s/^([^-}]*)-webkit-border-radius:/\1border-radius:/g
+            s/^([^-}]*)-moz-border-radius:/\1border-radius:/g
+            s/^([^-}]*)-webkit-box-sizing:/\1box-sizing:/g
+            s/^([^-}]*)-moz-box-sizing:/\1box-sizing:/g
+            s/^([^-}]*)-webkit-transform:/\1transform:/g
+            s/^([^-}]*)-moz-transform:/\1transform:/g
+            s/^([^-}]*)-webkit-transition:/\1transition:/g
+            s/^([^-}]*)-moz-transition:/\1transition:/g
+            s/^([^-}]*)-webkit-animation:/\1animation:/g
+            s/^([^-}]*)-moz-animation:/\1animation:/g
+
+            # 移除其他前綴屬性（排除已處理的屬性和 webkit-appearance）
+            /[^-:]{1}[^:]*-webkit-(?!appearance)[^i][^n]/d
+            /[^-:]{1}[^:]*-moz-[^i][^n]/d
+            /[^-:]{1}[^:]*-ms-[^i][^n]/d
+
+            # 移除重複的轉換後的屬性
+            /^.*border-radius:.*border-radius:/d
+            /^.*box-sizing:.*box-sizing:/d
+            /^.*transform:.*transform:/d
+            /^.*transition:.*transition:/d
+            /^.*animation:.*animation:/d
+
             # 移除空行
-            /^[[:space:]]*$/d;
+            /^[[:space:]]*$/d
         ' "$file" > "$temp_file"
     else
-        # Windows 的 sed 命令 (假設使用 Git Bash 或 WSL)
-        sed -E '
-            # 移除屬性前綴
-            /[^:]-webkit-/d;
-            /[^:]-moz-/d;
-            /[^:].*-ms.*:/d;              # 移除任何包含 -ms 的屬性名稱
-            # 移除屬性值前綴
-            /: *-webkit-/d;
-            /: *-moz-/d;
-            # 移除屬性值後綴包含 -ms 的行
-            /:[^;{}]*-ms.*[;{}]/d;
-            # 移除空行
-            /^[[:space:]]*$/d;
+        # Linux/Windows 的 sed 命令使用相同的處理邏輯
+        LC_ALL=C sed -E '
+            # 保留特殊情況
+            /(input-placeholder|::-webkit-input-placeholder|:-moz-placeholder|:-ms-input-placeholder)/b
+            /-webkit-appearance: *none/b
+
+            # 移除重複的標準屬性行（只保留第一個）
+            /border-radius:.*border-radius:/d
+            /box-sizing:.*box-sizing:/d
+            /transform:.*transform:/d
+            /transition:.*transition:/d
+            /animation:.*animation:/d
+
+            # 移除標準版本之前的所有前綴版本
+            /[^-]border-radius:/{
+                i=""
+                :a
+                $!N
+                /\n[^}]*/!{
+                    P
+                    D
+                }
+                /.*\n.*-[a-z]+-border-radius:/d
+                /\n[^}]/ba
+                P
+                D
+            }
+
+            # 轉換單一前綴為標準版本
+            s/^([[:space:]]*)-webkit-box-sizing:/\1box-sizing:/
+            s/^([[:space:]]*)-moz-box-sizing:/\1box-sizing:/
+            s/^([[:space:]]*)-ms-box-sizing:/\1box-sizing:/
+            s/^([[:space:]]*)-webkit-transform:/\1transform:/
+            s/^([[:space:]]*)-moz-transform:/\1transform:/
+            s/^([[:space:]]*)-ms-transform:/\1transform:/
+            s/^([[:space:]]*)-webkit-transition:/\1transition:/
+            s/^([[:space:]]*)-moz-transition:/\1transition:/
+            s/^([[:space:]]*)-ms-transition:/\1transition:/
+            s/^([[:space:]]*)-webkit-animation:/\1animation:/
+            s/^([[:space:]]*)-moz-animation:/\1animation:/
+            s/^([[:space:]]*)-ms-animation:/\1animation:/
+
+            # 移除空行但保留縮排
+            /^[[:space:]]*$/d
         ' "$file" > "$temp_file"
     fi
     
